@@ -1,0 +1,1309 @@
+{
+	"info": {
+		"_postman_id": "dc1afb12-d11c-40c7-906d-9aa2a5ada0f2",
+		"name": "museum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32881937",
+		"_collection_link": "https://aa6666-5270.postman.co/workspace/70532c51-b059-4929-8680-e61260d05461/collection/32881937-dc1afb12-d11c-40c7-906d-9aa2a5ada0f2?action=share&source=collection_link&creator=32881937"
+	},
+	"item": [
+		{
+			"name": "agregar museo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\",\r\n   \"foundedBefore\": \"2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/museum",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar museo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/museums",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"id\": \"48a9ab90-1276-11ed-861d-0242ac120002\",\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\",\r\n   \"foundedBefore\": \"2024\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get all museums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/museum",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all museums",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/museums",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "[\r\n   {\r\n       \"id\": \"14f05d0e-1275-11ed-861d-0242ac120002\",\r\n       \"name\": \"Bendigo Art Gallery\",\r\n       \"description\": \"Located in Bendigo, Victoria, we are one of the oldest and largest regional galleries in Australia. Our collection is extensive, with an emphasis on 19th century European art and Australian art from the 1800s, alongside a strong collection of contemporary Australian art.\\nOver the last decade, we have cemented a reputation for presenting innovative international exhibitions alongside a dynamic and varied suite of public programs and events.\",\r\n       \"address\": \"42 View Street\",\r\n       \"city\": \"Bendigo\",\r\n       \"image\": \"https://www.bendigoregion.com.au/sites/default/files/styles/large/public/2019-05/Bendigo%20Art%20Gallery.jpg?itok=mbJ4vxuK\",\r\n       \"artworks\": [\r\n           {\r\n               \"id\": \"14f05d0e-1275-11ed-861d-0242ac120032\",\r\n               \"name\": \"Self portrait\",\r\n               \"year\": 1931,\r\n               \"description\": \"Painted in 1948, Cossington Smith's self-portrait represents her vibrant use of light-infused colour and interest in structure and form. Depicting herself in the prime of her long career, the short brushstrokes, laden with paint, build up a strong colour portrait and capture the dedication she felt towards her art in her intense focused gaze and the determined set of her lips.\",\r\n               \"type\": \"Painting\",\r\n               \"mainImage\": \"https://www.portrait.gov.au/files/b/b/2/c/i5398.jpg\"\r\n           },\r\n           {\r\n               \"id\": \"14f05d0e-1275-11ed-861d-0242ac120004\",\r\n               \"name\": \"Self portrait in the studio\",\r\n               \"year\": 1976,\r\n               \"description\": \"Similar to Brett Whiteley's other major paintings of this period, 'Self-portrait in the studio' exudes a sense of sumptuous living and the liquid presence of the harbour through what he called 'the ecstasy-like effect of Ultramarine blue'. Whiteley's tiny mirror self-portrait also reflects the influence of Eastern art in his portrayal of man as merely part of a larger landscape.\",\r\n               \"type\": \"Painting\",\r\n               \"mainImage\": \"https://www.bendigoregion.com.au/sites/default/files/2021-05/brett_whiteley_greg_self.jpg\"\r\n           },\r\n           {\r\n               \"id\": \"14f05d0e-1275-11ed-861d-0242ac124032\",\r\n               \"name\": \"Dogs\",\r\n               \"year\": 1975,\r\n               \"description\": \"Brett Whiteley felt deeply connected to animals since childhood. In fact, between 1965 and 1988 he staged four exhibitions whose predominant or exclusive subject was animals that he had observed in zoos, domestic environments and in nature.\",\r\n               \"type\": \"Painting\",\r\n               \"mainImage\": \"https://www.bendigoregion.com.au/sites/default/files/2021-05/brett_whiteley_greg_dogs.jpg\"\r\n           }\r\n       ],\r\n       \"exhibitions\": [\r\n           {\r\n               \"id\": \"14f05d0e-1275-11ed-86dd-0242ac120032\",\r\n               \"name\": \"Brett Whiteley: Drawing is Everything\",\r\n               \"description\": \"At the heart of Brett Whiteley's extraordinary career was an exceptional talent for drawing.\\nDrawing underpinned everything he did – from painting to sculpture to prints – and was fundamental to his imaginative and creative process. Whiteley's drawing is richly expressive and his bold mastery of line is instantly recognisable. \\nThis major exhibition from the Art Gallery of New South Wales is the first to explore the central place of drawing in Whiteley's practice, featuring rarely seen early works from Sydney and Europe through to the great abstracts that brought Whiteley international fame in the 1960s. Also featured are lyrical landscapes, portraits, interiors and nudes and the iconic imagery of Sydney's Lavender Bay, offering a journey through the career that established him as one of the most prominent Australian artists of the 20th century.\\nDon't miss this rare opportunity to discover the very foundations of Whiteley's creativity and process, as showcased in a collection of drawings, paintings, and sculptures suffused with the unmistakable personality of the great Australian master.\"\r\n           },\r\n           {\r\n               \"id\": \"14ffg05d0e-1275-11ed-861d-0242ac120032\",\r\n               \"name\": \"Modern Australia\",\r\n               \"description\": \"This selection of works from the Gallery's collection traces the key movements in Modern Australian art and design, and the search for a distinctive Australian visual arts style throughout the mid twentieth century.\"\r\n           }\r\n       ]\r\n   },\r\n   {\r\n       \"id\": \"14f05fgfd0e-1275-11ed-861d-0242ac120032\",\r\n       \"name\": \"Museum of Modern Art\",\r\n       \"description\": \"At The Museum of Modern Art and MoMA PS1, we celebrate creativity, openness, tolerance, and generosity. We aim to be inclusive places— both onsite and online—where diverse cultural, artistic, social, and political positions are welcome. We're committed to sharing the most thought-provoking modern and contemporary art, and hope you will join us in exploring the art, ideas, and issues of our time.\",\r\n       \"address\": \"11 West 53 Street, Manhattan\",\r\n       \"city\": \"New York City\",\r\n       \"image\": \"https://media.cntraveler.com/photos/5dae0325b45cd80008161cf3/master/pass/MOMA-2019_IVRPHOTO-4373_ArtistChoice_HB_007-2-2000x1125.jpg\",\r\n       \"artworks\": [\r\n           {\r\n               \"id\": \"14fgff05d0e-1275-11ed-861d-0242ac120032\",\r\n               \"name\": \"Connaissance du monde\",\r\n               \"year\": 1996,\r\n               \"description\": \"In the late 1970s, after decades of making handwritten manuscripts, Bouabré began to draw on found cardboard, combining image and text. From the 1980s onwards, as the scope of his interests grew, he embarked on an all-encompassing project, drawing from observation almost daily. He titled the open-ended series of drawings Connaissance du Monde, and worked on it until his death in 2014, systematically compiling and classifying forms, ideas, and a wide range of phenomena, including domestic objects, cloud formations, and tribal scarifications, as well as the political climate and world events.\",\r\n               \"type\": \"Painting\",\r\n               \"mainImage\": \"https://universes.art/fileadmin/_processed_/2/b/csm_14_ivory_coast_16b2369926.jpg\"\r\n           }\r\n       ],\r\n       \"exhibitions\": [\r\n           {\r\n               \"id\": \"14f05d0e-127fg5-11ed-861d-0242ac120032\",\r\n               \"name\": \"Frédéric Bruly Bouabré: World Unbound\",\r\n               \"description\": \"The work of the Ivorian artist Frédéric Bruly Bouabré had a single objective: to record and transmit information about the known universe. Devoting his life to a quest for knowledge, Bouabré captured and codified subjects from a range of sources, including cultural traditions, folklore, religious and spiritual belief systems, philosophy, and popular culture. \"I do not work from my imagination,\\\" he once said. \"I observe, and what I see delights me.\"\"\r\n           }\r\n       ]\r\n   }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "get museum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/museum/{{museum_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get museum",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/museums/{{museum_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums",
+								"{{museum_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"id\": \"1e061964-1276-11ed-861d-0242ac120002\",\r\n   \"name\": \"Museum of Modern Art\",\r\n   \"description\": \"At The Museum of Modern Art and MoMA PS1, we celebrate creativity, openness, tolerance, and generosity. We aim to be inclusive places— both onsite and online—where diverse cultural, artistic, social, and political positions are welcome. We're committed to sharing the most thought-provoking modern and contemporary art, and hope you will join us in exploring the art, ideas, and issues of our time.\",\r\n   \"address\": \"11 West 53 Street, Manhattan\",\r\n   \"city\": \"New York City\",\r\n   \"image\": \"https://media.cntraveler.com/photos/5dae0325b45cd80008161cf3/master/pass/MOMA-2019_IVRPHOTO-4373_ArtistChoice_HB_007-2-2000x1125.jpg\",\r\n   \"artworks\": [\r\n       {\r\n           \"id\": \"2e061964-1276-11ed-861d-0242ac120002\",\r\n           \"name\": \"Connaissance du monde\",\r\n           \"year\": 1996,\r\n           \"description\": \"In the late 1970s, after decades of making handwritten manuscripts, Bouabré began to draw on found cardboard, combining image and text. From the 1980s onwards, as the scope of his interests grew, he embarked on an all-encompassing project, drawing from observation almost daily. He titled the open-ended series of drawings Connaissance du Monde, and worked on it until his death in 2014, systematically compiling and classifying forms, ideas, and a wide range of phenomena, including domestic objects, cloud formations, and tribal scarifications, as well as the political climate and world events.\",\r\n           \"type\": \"Painting\",\r\n           \"mainImage\": \"https://universes.art/fileadmin/_processed_/2/b/csm_14_ivory_coast_16b2369926.jpg\"\r\n       }\r\n   ],\r\n   \"exhibitions\": [\r\n       {\r\n           \"id\": \"1c061964-1276-11ed-861d-0242ac120002\",\r\n           \"name\": \"Frédéric Bruly Bouabré: World Unbound\",\r\n           \"description\": \"The work of the Ivorian artist Frédéric Bruly Bouabré had a single objective: to record and transmit information about the known universe. Devoting his life to a quest for knowledge, Bouabré captured and codified subjects from a range of sources, including cultural traditions, folklore, religious and spiritual belief systems, philosophy, and popular culture. \"I do not work from my imagination,\\\" he once said. \"I observe, and what I see delights me.\"\"\r\n       }\r\n   ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get museum no existe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/museum/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get museum no existe",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/museums/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "editar museo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC (new address)\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\",\r\n   \"foundedBefore\": \"2024-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/museum/{{museum_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "editar museo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC (new address)\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/museums/{{museum_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums",
+								"{{museum_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"id\": \"144602ac-1278-11ed-861d-0242ac120002\",\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC (new address)\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "editar museo no existe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/museum/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "editar museo no existe",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/museums/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "borrar museo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/museum/{{museum_id}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "borrar museo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/museums/{{museum_id}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums",
+								"{{museum_id}}"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "borrar museo no existe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/museum/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "borrar museo no existe",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/museums/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"museums",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "agregar una obra de arte al museo que no existe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar una obra de arte al museo que no existe",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"00000000-0000-0000-0000-000000000000",
+								"artwork",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get una obrea de arte al museo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get una hobrea de arte al museo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"id\": \"7e265679-3a85-416d-afca-80fd04e2b79c\",\r\n   \"name\": \"La Femme qui pleure\",\r\n   \"year\": 1837,\r\n   \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso's famous mural-size painting Guernica, executed some months earlier.\",\r\n   \"type\": \"Painting\",\r\n   \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get una obra de arte no existe al museo Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get una hobrea de arte no existe al museo Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "agregar una obra de arte no existe al museo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar una obra de arte no existe al museo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The artwork with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "get una obra de arte al museo que no existe Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get una hobrea de arte al museo que no existe Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"00000000-0000-0000-0000-000000000000",
+								"artwork",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "agregar una obrea de arte al museo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar una obrea de arte al museo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museums/{{museum_id}}/artworks/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museums",
+								"{{museum_id}}",
+								"artworks",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"id\": \"d48e0c39-e498-4244-8967-6cb96f7ed50f\",\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\",\r\n   \"artworks\": [\r\n       {\r\n           \"id\": \"b4584528-7a09-4634-80d8-2bc5e28d0cce\",\r\n           \"name\": \"La Femme qui pleure\",\r\n           \"year\": 1837,\r\n           \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso's famous mural-size painting Guernica, executed some months earlier.\",\r\n           \"type\": \"Painting\",\r\n           \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\r\n       }\r\n   ],\r\n   \"exhibitions\": []\r\n}"
+				}
+			]
+		},
+		{
+			"name": "obras de arte en el museo no existe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000",
+						"artwork"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "obras de arte en el museo no existe",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"00000000-0000-0000-0000-000000000000",
+								"artwork"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "agregar una obra de arte a un museo no existe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   {\r\n       \"id\": \"{{artwork_id_2}}\"\r\n   }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000",
+						"artwork"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar una obra de arte a un museo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n   {\r\n       \"id\": \"{{artwork_id_2}}\"\r\n   }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"00000000-0000-0000-0000-000000000000",
+								"artwork"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The museum  with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "agregar una obra de arte no existe a un museo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   {\r\n       \"id\": \"00000000-0000-0000-0000-000000000000\"\r\n   }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar una obra de arte no existe a un museo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n   {\r\n       \"id\": \"{{artwork_id_2}}\"\r\n   }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 404,\r\n   \"message\": \"The artwork with the given id was not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "agregar una obra de arte a un museo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   {\r\n       \"id\": \"{{artwork_id_2}}\"\r\n   }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "agregar una obra de arte a un museo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n   {\r\n       \"id\": \"{{artwork_id_2}}\"\r\n   }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"id\": \"00519f14-2cd5-4a21-810d-39b06319bb54\",\r\n   \"name\": \"Smithsonian national museum of natural history\",\r\n   \"description\": \"The world's most popular natural history museum is dedicated to understanding the natural world and our place in it. Delve into the fascinating story of our planet, from its fiery beginnings through billions of years of transformation, and explore life on Earth through exhibitions and activities, collection objects and research that happens in the lab and in the field. The museum is larger than 18 football fields and is home to the largest natural history collection in the world.\",\r\n   \"address\": \"10th St. & Constitution Ave. NW, Washington, DC\",\r\n   \"city\": \"Washington DC\",\r\n   \"image\": \"https://www.si.edu/sites/default/files/newsdesk/fact_sheets/nhb2015-02891.jpg\",\r\n   \"artworks\": [\r\n       {\r\n           \"id\": \"c3039d8c-baaf-45f3-96de-7277936a374d\",\r\n           \"name\": \"La Vie\",\r\n           \"year\": 1903,\r\n           \"description\": \"La Vie (Zervos I 179) is a 1903 oil painting by Pablo Picasso. It is widely regarded as the pinnacle of Picasso's Blue Period\",\r\n           \"type\": \"Painting\",\r\n           \"mainImage\": \"https://upload.wikimedia.org/wikipedia/en/thumb/1/11/La_Vie_by_Pablo_Picasso.jpg/800px-La_Vie_by_Pablo_Picasso.jpg\"\r\n       }\r\n   ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "eliminar una obra de arte al museo que no existe",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"00000000-0000-0000-0000-000000000000",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "eliminar una obra de arte al museo que no existe",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/00000000-0000-0000-0000-000000000000/artwork/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"00000000-0000-0000-0000-000000000000",
+								"artwork",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "eliminar una obra  no existe de arte al museo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/00000000-0000-0000-0000-000000000000",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"00000000-0000-0000-0000-000000000000"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "eliminar una obra  no existe de arte al museo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/00000000-0000-0000-0000-000000000000",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"00000000-0000-0000-0000-000000000000"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "eliminar una obra de arte no asociada al museo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "eliminar una obra de arte no asociada al museo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"status": "Precondition Failed",
+					"code": 412,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get obra de arte no asociada al museo ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"{{artwork_id_2}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get obra de arte no asociada al museo ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_2}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"{{artwork_id_2}}"
+							]
+						}
+					},
+					"status": "Precondition Failed",
+					"code": 412,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n   \"statusCode\": 412,\r\n   \"message\": \"The artwork with the given id is not associated to the museum\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "obras de arte en el museo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "obras de arte en el museo",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "[\r\n   {\r\n       \"id\": \"28a6bcd5-7f74-4d31-ac70-456d0c520544\",\r\n       \"name\": \"La Femme qui pleure\",\r\n       \"year\": 1837,\r\n       \"description\": \"The Weeping Woman, I is an elaboration of one of the central figures in Picasso's famous mural-size painting Guernica, executed some months earlier.\",\r\n       \"type\": \"Painting\",\r\n       \"mainImage\": \"https://assets.catawiki.nl/assets/2019/3/7/2/f/5/2f5c8a17-0b06-4f26-b4a7-4fa51a430ce1.jpg\"\r\n   }\r\n]"
+				}
+			]
+		},
+		{
+			"name": "eliminar una obra de arte al museo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"museum",
+						"{{museum_id}}",
+						"artwork",
+						"{{artwork_id_1}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "eliminar una obra de arte al museo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/museum/{{museum_id}}/artwork/{{artwork_id_1}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"museum",
+								"{{museum_id}}",
+								"artwork",
+								"{{artwork_id_1}}"
+							]
+						}
+					},
+					"code": 204,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		}
+	]
+}
